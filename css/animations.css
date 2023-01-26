@@ -1,0 +1,23 @@
+@keyframes flipCard{
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(180deg);
+    background-blend-mode: normal;
+  }
+}
+
+@keyframes shakeCard{
+  0%{
+    transform: translateX(0px);
+  } 25%{
+    transform: translateX(10px);
+  } 50%{
+    transform: translateX(-10px);
+  } 75%{
+    transform: translateX(10px);
+  } 100%{
+    transform: translateX(-10px);
+  }
+}

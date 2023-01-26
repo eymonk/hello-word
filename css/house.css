@@ -1,0 +1,24 @@
+#first-card{
+  background-image: url(../img/house/window.jpg);
+}
+#second-card{
+  background-image: url(../img/house/roof.jpg);
+}
+#third-card{
+  background-image: url(../img/house/attic.jpg);
+}
+#fourth-card{
+  background-image: url(../img/house/porch.jpg);
+}
+#fifth-card{
+  background-image: url(../img/house/stairs.jpg);
+}
+#sixth-card{
+  background-image: url(../img/house/door.jpg);
+}
+#seventh-card{
+  background-image: url(../img/house/fireplace.jpg);
+}
+#eighth-card{
+  background-image: url(../img/house/fence.jpg);
+}

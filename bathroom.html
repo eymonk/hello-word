@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="content" width="device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta lang="en, ru">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bathroom.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    <link rel="stylesheet" type="text/css" href="css/queries/queries.css">
+    <link rel="icon" href="img/click-pick-icon.ico">
+    <script defer src="js/script.js"></script>
+    <title>Click Pick | bathroom</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">Click Pick</a></h1>
+      <div>
+        <ul>
+          <li><p onclick="changeTheme()">◑</p></li>
+          <li><a href="https://vk.com/id58913402" target="_blank">?</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="grid-container">
+      <div class="card" id="first-card">
+        <p class="label" id="first-label">shower</p>
+        <input id="first-input" type="text" placeholder="перевод">
+        <button class="btn" id="first-btn" onclick="checkAnswer('first','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('first')")>🔊<audio id="first" src="audio/bathroom/shower.mp3"></p>
+        <p class="back-label" id="first-back-label">shower</p>
+      </div>
+      <div class="card" id="second-card">
+        <p class="label" id="second-label">bath</p>
+        <input id="second-input" type="text" placeholder="перевод">
+        <button class="btn" id="second-btn" onclick="checkAnswer('second','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('second')")>🔊<audio id="second" src="audio/bathroom/bath.mp3"></p>
+        <p class="back-label" id="second-back-label">bath</p>
+      </div>
+      <div class="card" id="third-card">
+        <p class="label" id="third-label">slippers</p>
+        <input id="third-input" type="text" placeholder="перевод">
+        <button class="btn" id="third-btn" onclick="checkAnswer('third','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('third')")>🔊<audio id="third" src="audio/bathroom/slippers.mp3"></p>
+        <p class="back-label" id="third-back-label">slippers</p>
+      </div>
+      <div class="card" id="fourth-card">
+        <p class="label" id="fourth-label">soap</p>
+        <input id="fourth-input" type="text" placeholder="перевод">
+        <button class="btn" id="fourth-btn" onclick="checkAnswer('fourth','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('fourth')")>🔊<audio id="fourth" src="audio/bathroom/soap.mp3"></p>
+        <p class="back-label" id="fourth-back-label">soap</p>
+      </div>
+      <div class="card" id="fifth-card">
+        <p class="label" id="fifth-label">mirror</p>
+        <input id="fifth-input" type="text" placeholder="перевод">
+        <button class="btn" id="fifth-btn" onclick="checkAnswer('fifth','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('fifth')")>🔊<audio id="fifth" src="audio/bathroom/mirror.mp3"></p>
+        <p class="back-label" id="fifth-back-label">mirror</p>
+      </div>
+      <div class="card" id="sixth-card">
+        <p class="label" id="sixth-label">towel</p>
+        <input id="sixth-input" type="text" placeholder="перевод">
+        <button class="btn" id="sixth-btn" onclick="checkAnswer('sixth','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('sixth')")>🔊<audio id="sixth" src="audio/bathroom/towel.mp3"></p>
+        <p class="back-label" id="sixth-back-label">towel</p>
+      </div>
+      <div class="card" id="seventh-card">
+        <p class="label" id="seventh-label">shampoo</p>
+        <input id="seventh-input" type="text" placeholder="перевод">
+        <button class="btn" id="seventh-btn" onclick="checkAnswer('seventh','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('seventh')")>🔊<audio id="seventh" src="audio/bathroom/shampoo.mp3"></p>
+        <p class="back-label" id="seventh-back-label">shampoo</p>
+      </div>
+      <div class="card" id="eighth-card">
+        <p class="label" id="eighth-label">hairdryer</p>
+        <input id="eighth-input" type="text" placeholder="перевод">
+        <button class="btn" id="eighth-btn" onclick="checkAnswer('eighth','bathroom')">submit</button>
+        <p class="sound-btn" onclick="playSound('eighth')")>🔊<audio id="eighth" src="audio/bathroom/hairdryer.mp3"></p>
+        <p class="back-label" id="eighth-back-label">hairdryer</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="house.html">house</a></li>
+        <li><a href="kitchen.html">kitchen</a></li>
+        <li><a class="selected" href="bathroom.html">bathroom</a></li>
+        <li><a href="body.html">body</a></li>
+        <li><a href="road.html">road</a></li>
+      </ul>
+    </nav>
+    <audio id="no-sound" src="audio/sounds/no.mp3">
+    <audio id="yes-sound" src="audio/sounds/yes.mp3">
+  </body>
+</html>

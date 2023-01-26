@@ -1,0 +1,85 @@
+@media only screen and (max-width: 1250px){
+  html{
+    font-size: 18px;
+  }
+  .card{
+    grid-column: span 4;
+  }
+  .last-two-cards:nth-child(odd){
+    grid-column: 2/6;
+  }
+  .last-two-cards:nth-child(even){
+    grid-column: 8/12;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  html{
+    font-size: 20px;
+  }
+  header div{
+    min-width: 20%;
+  }
+  .index-nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .index-nav li{
+    margin: .25em 0;
+  }
+  .card{
+    grid-column: span 6;
+  }
+  .last-two-cards:nth-child(odd){
+    grid-column: span 6;
+  }
+  .last-two-cards:nth-child(even){
+    grid-column: span 6;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .card{
+    grid-column: span 12;
+  }
+  .last-two-cards:nth-child(odd){
+    grid-column: span 12;
+  }
+  .last-two-cards:nth-child(even){
+    grid-column: span 12;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  header div{
+    min-width: 25%;
+  }
+  #grid-container{
+    width: 90%;
+  }
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li{
+    margin: .2em 0;
+  }
+}
+
+@media only screen and (max-width: 370px){
+  html{
+    font-size: 17px;
+  }
+  h1{
+    font-size: 1.2rem;
+  }
+  #grid-container{
+    width: 98%;
+  }
+}
