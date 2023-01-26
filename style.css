@@ -1,3 +1,6 @@
+@import './components/container/container.css';
+@import './components/nav/nav.css';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -55,10 +58,6 @@ ul {
   list-style: none;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-}
 
 .btn {
   font-family: 'Trebuchet MS';
@@ -73,6 +72,9 @@ ul {
   transform: translateY(2.5px);
 }
 
+.hidden {
+  display: none;
+}
 
 /**************************** HEADER ****************************/
 .header {
@@ -168,29 +170,7 @@ input:focus {
   transform: rotateZ(10deg);
 }
 
-/**************************** NAVIGATION ****************************/
-.container__nav {
-  width: 100%;
-  text-shadow: 2px 2px 7px var(--box-shadow-color);
-}
 
-.container__nav-item {
-  font-size: 1.5rem;
-  transform: rotateZ(5deg);
-  transition: transform var(--transition-fast);
-}
-
-.container__nav-item:hover {
-  transform: rotateZ(0deg);
-}
-.main-nav {
-  color: var(--font-dark-color);
-}
-.selected {
-  font-weight: bold;
-  padding: .2em .7em;
-  box-shadow: inset 0 0 3px 2px #333;
-}
 
 
 /**************************** FOOTER ****************************/

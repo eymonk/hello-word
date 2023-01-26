@@ -1,0 +1,13 @@
+.container__nav {
+    width: 100%;
+    text-shadow: 2px 2px 7px var(--box-shadow-color);
+}
+
+.container__nav-item {
+    font-size: 1.5rem;
+    transform: rotateZ(5deg);
+    transition: transform var(--transition-fast);
+}
+.container__nav-item:hover {
+    transform: rotateZ(0deg);
+}

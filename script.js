@@ -1,3 +1,5 @@
+import './components/nav/nav.js';
+
 const domElements = {
   cards: document.querySelectorAll('.card'),
   first: {
