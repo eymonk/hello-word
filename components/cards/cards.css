@@ -9,19 +9,20 @@
 
 .cards__item {
     position: relative;
-    background-blend-mode: hue;
+
+    /* flex */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    /* grid */
+    grid-column: span 3;
     background-size: cover;
     background-color: var(--dark-dark-color);
     color: white;
     box-shadow: 5px 4px 5px var(--box-shadow-dark-color);
-    /* flex */
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* grid */
-    grid-column: span 3;
 }
 
 .cards__label {
@@ -31,17 +32,7 @@
 }
 
 .cards__input {
-    font-size: 1rem;
-    padding: .1em .3em;
-    margin: 1.5em 0;
     max-width: 70%;
-    box-shadow: inset 0 0 3px var(--light-color);
-    border-radius: 2px;
-    outline: none;
-    background-color: #ccc;
-}
-.cards__input:focus {
-    background-color: #fff;
 }
 
 .cards__back-label {
@@ -57,11 +48,14 @@
     display: none;
 }
 .cards__sound-btn {
-    cursor: pointer;
     position: absolute;
-    top: .5em;
-    left: .5em;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+
     transition: transform 150ms;
+    background: transparent;
+    border: none;
 }
 .cards__sound-btn:hover {
     transform: rotateZ(10deg);

@@ -5,7 +5,7 @@ function createCard(topic, word, number) {
     const cardsContainer = document.querySelector('.cards');
     const cardTemplate = `
           <p id="label-${number}" class="cards__label">${word}</p>
-          <input id="input-${number}" type="text" placeholder="перевод">
+          <input class="cards__input" id="input-${number}" type="text" placeholder="перевод">
           <button id="btn-${number}" class="cards__btn cards__btn_submit">submit</button>
           <button class="cards__sound-btn">
             🔊<audio src="assets/cards/${topic}/audio/${word}.mp3"></audio>
