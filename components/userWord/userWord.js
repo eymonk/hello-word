@@ -11,8 +11,18 @@ async function getWordTranslation(word) {
         headers: { "Content-Type": "application/json" }
     });
 
-    const res = await response.json();
+    const wordData = await response.json();
 
-    return res.translation;
+    return wordData.translation;
+}
+
+async function getWordSound(word) {
+    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+    const soundData = await response.json();
+    const audio = document.createElement('audio');
+
+    audio.setAttribute('src', soundData[0].phonetics[0].audio);
+
+    return audio;
 }
 
