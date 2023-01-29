@@ -1,5 +1,5 @@
+import { addTopic, createTopicWord } from './components/topics.js';
 import './components/nav/nav.js';
-import {addTopic, createTopicWord} from './components/topics.js';
 
 const domElements = {
   cards: document.querySelectorAll('.card'),
@@ -110,46 +110,6 @@ addTopic('house', houseWords);
 
 
 
-
-
-
-
-
-
-
-
-
-function checkAnswer(number, type){
-  const card = domElements[number].card
-  const label = domElements[number].label
-  const backLabel = domElements[number].backLabel
-  const input = domElements[number].input
-  const button = domElements[number].button
-  const answer = answers[type][number]
-  const yesSound = document.getElementById('yes-sound')
-  const noSound = document.getElementById('no-sound')
-  let text = input.value.toLowerCase().replace(/ё/, 'е')
-
-  if(text === answer){
-    yesSound.play()
-    card.style.animation = 'flipCard 900ms forwards';
-    input.style.opacity = '0'
-    button.style.opacity = '0'
-    label.textContent = ' '
-    setTimeout(()=>{backLabel.style.display = 'block'}, 600)
-  }
-  else {
-    noSound.play()
-    card.style.animation = 'shakeCard 500ms'
-    setTimeout(()=>{card.style.animation = 'none'}, 900)
-  }
-}
-
-
-function playSound(number){
-  document.getElementById(number).play()
-}
-
 let theme = 'light'
 function changeTheme(obj){
   switch(theme){
@@ -171,7 +131,3 @@ function changeTheme(obj){
     break
   }
 }
-
-domElements.cards.forEach(card => {
-  card.addEventListener('click', () => card.children[1].focus())
-})
