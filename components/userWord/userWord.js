@@ -10,7 +10,6 @@ async function getWordTranslation(word) {
         }),
         headers: { "Content-Type": "application/json" }
     });
-
     const wordData = await response.json();
 
     return wordData.translation;
@@ -25,4 +24,13 @@ async function getWordSound(word) {
 
     return audio;
 }
+
+async function getWordPicture(word) {
+    const response = await fetch(`https://api.unsplash.com/search/photos/?client_id=OMUSAWutprBM7ncm9fuHzV4VIpTVMsUnzLHv_iy0fhU&query=${word}`);
+    const imageData = await response.json();
+
+    return imageData.results[0].urls.small;
+}
+
+
 
