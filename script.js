@@ -1,5 +1,6 @@
 import { addTopic, createTopicWord } from './components/topics.js';
 import './components/nav/nav.js';
+import './components/userWord/userWord.js';
 
 const houseWords = [
   createTopicWord('window', 'окно'),
