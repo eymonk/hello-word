@@ -1,4 +1,5 @@
 import './components/nav/nav.js';
+import {addTopic, createTopicWord} from './components/topics.js';
 
 const domElements = {
   cards: document.querySelectorAll('.card'),
@@ -54,16 +55,7 @@ const domElements = {
 }
 
 const answers = {
-  house: {
-    first: 'окно',
-    second: 'крыша',
-    third: 'чердак',
-    fourth: 'крыльцо',
-    fifth: 'лестница',
-    sixth: 'дверь',
-    seventh: 'камин',
-    eighth: 'забор'
-  }, kitchen: {
+  kitchen: {
     first: 'нож',
     second: 'ложка',
     third: 'вилка',
@@ -100,8 +92,32 @@ const answers = {
     seventh: 'знак',
     eighth: 'светофор'
   }
-
 }
+
+
+const houseWords = [
+  createTopicWord('window', 'окно'),
+  createTopicWord('roof', 'крыша'),
+  createTopicWord('attic', 'чердак'),
+  createTopicWord('porch', 'крыльцо'),
+  createTopicWord('stairs', 'лестница'),
+  createTopicWord('door', 'дверь'),
+  createTopicWord('fireplace', 'камин'),
+  createTopicWord('fence', 'забор'),
+]
+addTopic('house', houseWords);
+
+
+
+
+
+
+
+
+
+
+
+
 
 function checkAnswer(number, type){
   const card = domElements[number].card

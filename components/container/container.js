@@ -1,5 +1,8 @@
+import { showCards } from '../cards/card.js';
+
 const dom = {
     nav: document.querySelector('.container__nav'),
+    cardsGrid: document.querySelector('.cards'),
 }
 
 function closeNavigation() {
@@ -8,14 +11,17 @@ function closeNavigation() {
 
 function openNavigation() {
     dom.nav.classList.remove('hidden');
+    dom.cardsGrid.classList.add('hidden');
 }
 
-function openCards(topic) {
+function openTopic(topic) {
     closeNavigation();
+    dom.cardsGrid.classList.remove('hidden');
+    showCards(topic);
 }
 
 export {
     openNavigation,
     closeNavigation,
-    openCards,
+    openTopic,
 }

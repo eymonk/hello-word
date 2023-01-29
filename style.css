@@ -1,5 +1,6 @@
 @import './components/container/container.css';
 @import './components/nav/nav.css';
+@import './components/cards/cards.css';
 
 * {
   box-sizing: border-box;
@@ -59,7 +60,7 @@ ul {
 }
 
 
-.btn {
+button {
   font-family: 'Trebuchet MS';
   font-size: .9rem;
   border: 3px solid var(--light-color);
@@ -67,9 +68,6 @@ ul {
   cursor: pointer;
   transition: transform 200ms;
   outline: none;
-}
-.btn:hover {
-  transform: translateY(2.5px);
 }
 
 .hidden {
@@ -102,73 +100,6 @@ ul {
   transform: rotateZ(25deg);
 }
 
-/**************************** MAIN ****************************/
-#grid-container {
-    margin: 1.5em auto;
-    width: 80%;
-    display: grid;
-    grid-gap: 1.5em;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(13em, auto);
-}
-
-.card {
-  position: relative;
-  background-blend-mode: hue;
-  background-size: cover;
-  background-color: var(--dark-dark-color);
-  color: white;
-  box-shadow: 5px 4px 5px var(--box-shadow-dark-color);
-  /* flex */
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* grid */
-  grid-column: span 3;
-}
-
-.label {
-  font-size: 1.2em;
-  letter-spacing: 2px;
-  max-width: 70%;
-}
-input {
-  font-size: 1rem;
-  padding: .1em .3em;
-  margin: 1.5em 0;
-  max-width: 70%;
-  box-shadow: inset 0 0 3px var(--light-color);
-  border-radius: 2px;
-  outline: none;
-  background-color: #ccc;
-}
-input:focus {
-  background-color: #fff;
-}
-.back-label {
-  font-size: 1.2em;
-  padding: .1em;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  transform: rotateY(180deg);
-  background-color: var(--dark-dark-color);
-  color: var(--light-color);
-  display: none;
-}
-.sound-btn {
-  cursor: pointer;
-  position: absolute;
-  top: .5em;
-  left: .5em;
-  transition: transform 150ms;
-}
-.sound-btn:hover {
-  transform: rotateZ(10deg);
-}
 
 
 

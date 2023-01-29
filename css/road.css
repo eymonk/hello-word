@@ -1,24 +1,24 @@
 #first-card{
-  background-image: url(../img/road/wheel.jpg);
+  background-image: url(../assets/img/road/wheel.jpg);
 }
 #second-card{
-  background-image: url(../img/road/car.jpg);
+  background-image: url(../assets/img/road/car.jpg);
 }
 #third-card{
-  background-image: url(../img/road/fuel.jpg);
+  background-image: url(../assets/img/road/fuel.jpg);
 }
 #fourth-card{
-  background-image: url(../img/road/luggage.jpg);
+  background-image: url(../assets/img/road/luggage.jpg);
 }
 #fifth-card{
-  background-image: url(../img/road/driver.jpg);
+  background-image: url(../assets/img/road/driver.jpg);
 }
 #sixth-card{
-  background-image: url(../img/road/passenger.jpg);
+  background-image: url(../assets/img/road/passenger.jpg);
 }
 #seventh-card{
-  background-image: url(../img/road/sign.jpg);
+  background-image: url(../assets/img/road/sign.jpg);
 }
 #eighth-card{
-  background-image: url(../img/road/traffic-light.jpg);
+  background-image: url(../assets/img/road/traffic-light.jpg);
 }
