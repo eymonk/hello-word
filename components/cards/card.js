@@ -3,8 +3,9 @@ import topics from '../topics.js';
 function createCard(topic, word, number) {
     const newCard = document.createElement('div');
     const cardsContainer = document.querySelector('.cards');
+    const wordLabel = word.includes('_') ? word.split('_').join(' ') : word;
     const cardTemplate = `
-          <p id="label-${number}" class="cards__label">${word}</p>
+          <p id="label-${number}" class="cards__label">${wordLabel}</p>
           <input class="cards__input" id="input-${number}" type="text" placeholder="перевод">
           <button id="btn-${number}" class="cards__btn cards__btn_submit">submit</button>
           <button class="cards__sound-btn">

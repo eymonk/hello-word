@@ -1,100 +1,6 @@
 import { addTopic, createTopicWord } from './components/topics.js';
 import './components/nav/nav.js';
 
-const domElements = {
-  cards: document.querySelectorAll('.card'),
-  first: {
-    input: document.getElementById('first-input'),
-    card: document.getElementById('first-card'),
-    label: document.getElementById('first-label'),
-    backLabel: document.getElementById('first-back-label'),
-    button: document.getElementById('first-btn'),
-  }, second: {
-    input: document.getElementById('second-input'),
-    card: document.getElementById('second-card'),
-    label: document.getElementById('second-label'),
-    backLabel: document.getElementById('second-back-label'),
-    button: document.getElementById('second-btn')
-  }, third: {
-    input: document.getElementById('third-input'),
-    card: document.getElementById('third-card'),
-    label: document.getElementById('third-label'),
-    backLabel: document.getElementById('third-back-label'),
-    button: document.getElementById('third-btn'),
-  }, fourth: {
-    input: document.getElementById('fourth-input'),
-    card: document.getElementById('fourth-card'),
-    label: document.getElementById('fourth-label'),
-    backLabel: document.getElementById('fourth-back-label'),
-    button: document.getElementById('fourth-btn'),
-  }, fifth: {
-    input: document.getElementById('fifth-input'),
-    card: document.getElementById('fifth-card'),
-    label: document.getElementById('fifth-label'),
-    backLabel: document.getElementById('fifth-back-label'),
-    button: document.getElementById('fifth-btn'),
-  }, sixth: {
-    input: document.getElementById('sixth-input'),
-    card: document.getElementById('sixth-card'),
-    label: document.getElementById('sixth-label'),
-    backLabel: document.getElementById('sixth-back-label'),
-    button: document.getElementById('sixth-btn'),
-  }, seventh: {
-    input: document.getElementById('seventh-input'),
-    card: document.getElementById('seventh-card'),
-    label: document.getElementById('seventh-label'),
-    backLabel: document.getElementById('seventh-back-label'),
-    button: document.getElementById('seventh-btn'),
-  }, eighth: {
-    input: document.getElementById('eighth-input'),
-    card: document.getElementById('eighth-card'),
-    label: document.getElementById('eighth-label'),
-    backLabel: document.getElementById('eighth-back-label'),
-    button: document.getElementById('eighth-btn'),
-  }
-}
-
-const answers = {
-  kitchen: {
-    first: 'нож',
-    second: 'ложка',
-    third: 'вилка',
-    fourth: 'тарелка',
-    fifth: 'чашка',
-    sixth: 'чайник',
-    seventh: 'поварешка',
-    eighth: 'сковорода'
-  }, bathroom: {
-    first: 'душ',
-    second: 'ванна',
-    third: 'тапки',
-    fourth: 'мыло',
-    fifth: 'зеркало',
-    sixth: 'полотенце',
-    seventh: 'шампунь',
-    eighth: 'фен'
-  }, body: {
-    first: 'голова',
-    second: 'лоб',
-    third: 'рука',
-    fourth: 'нога',
-    fifth: 'спина',
-    sixth: 'живот',
-    seventh: 'локоть',
-    eighth: 'колено'
-  }, road: {
-    first: 'колесо',
-    second: 'машина',
-    third: 'топливо',
-    fourth: 'багаж',
-    fifth: 'водитель',
-    sixth: 'пассажир',
-    seventh: 'знак',
-    eighth: 'светофор'
-  }
-}
-
-
 const houseWords = [
   createTopicWord('window', 'окно'),
   createTopicWord('roof', 'крыша'),
@@ -107,7 +13,55 @@ const houseWords = [
 ]
 addTopic('house', houseWords);
 
+const kitchenWords = [
+  createTopicWord('knife', 'нож'),
+  createTopicWord('spoon', 'ложка'),
+  createTopicWord('fork', 'вилка'),
+  createTopicWord('plate', 'тарелка'),
+  createTopicWord('cup', 'чашка'),
+  createTopicWord('teapot', 'чайник'),
+  createTopicWord('ladle', 'поварешка'),
+  createTopicWord('pan', 'сковорода'),
+]
+addTopic('kitchen', kitchenWords);
 
+
+const bathroomWords = [
+  createTopicWord('shower', 'душ'),
+  createTopicWord('bath', 'ванна'),
+  createTopicWord('slippers', 'тапки'),
+  createTopicWord('soap', 'мыло'),
+  createTopicWord('mirror', 'зеркало'),
+  createTopicWord('towel', 'полотенце'),
+  createTopicWord('shampoo', 'шампунь'),
+  createTopicWord('hairdryer', 'фен'),
+]
+addTopic('bathroom', bathroomWords);
+
+const roadWords = [
+  createTopicWord( 'wheel', 'колесо'),
+  createTopicWord( 'car', 'машина'),
+  createTopicWord( 'fuel', 'топливо'),
+  createTopicWord( 'luggage', 'багаж'),
+  createTopicWord( 'driver', 'водитель'),
+  createTopicWord( 'passenger', 'пассажир'),
+  createTopicWord( 'sign', 'знак'),
+  createTopicWord( 'traffic light', 'светофор'),
+]
+addTopic('road', roadWords);
+
+
+const bodyWords = [
+  createTopicWord('head', 'голова'),
+  createTopicWord('forehead', 'лоб'),
+  createTopicWord('arm', 'рука'),
+  createTopicWord('leg', 'нога'),
+  createTopicWord('back', 'спина'),
+  createTopicWord('stomach', 'живот'),
+  createTopicWord('elbow', 'локоть'),
+  createTopicWord('knee', 'колено'),
+]
+addTopic('body', bodyWords);
 
 
 let theme = 'light'

@@ -19,8 +19,10 @@
 
     /* grid */
     grid-column: span 3;
-    background-size: cover;
+    background-size: contain;
     background-color: var(--dark-dark-color);
+    background-repeat: no-repeat;
+    background-position: center;
     color: white;
     box-shadow: 5px 4px 5px var(--box-shadow-dark-color);
 }

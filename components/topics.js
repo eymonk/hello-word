@@ -1,8 +1,11 @@
 const topics = {};
 
 function createTopicWord(word, translation) {
+    const formattedWord = word.includes(' ') ? word.split(' ').join('_') : word;
+
     return {
-        word, translation
+        word: formattedWord,
+        translation
     }
 }
 function addTopic(name, words) {
