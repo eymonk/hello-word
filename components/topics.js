@@ -1,17 +1,21 @@
 const topics = {};
 
-function createTopicWord(word, translation) {
+function addWordToTopic(topic, word) {
+    if (!topics[topic]) topics[topic] = [];
+    topics[topic].push(word);
+};
+
+function createTopicWord(topic, word, translation, audio, img) {
     const formattedWord = word.includes(' ') ? word.split(' ').join('_') : word;
-
-    return {
+    const topicWord = {
         word: formattedWord,
-        translation
+        translation,
+        audio,
+        img,
     }
-}
-function addTopic(name, words) {
-    topics[name] = words;
+
+    addWordToTopic(topic, topicWord);
 }
 
-export { addTopic, createTopicWord };
-
+export { createTopicWord };
 export default topics;

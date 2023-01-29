@@ -1,68 +1,57 @@
-import { addTopic, createTopicWord } from './components/topics.js';
+import { createTopicWord } from './components/topics.js';
+import { openNavigation } from './components/container/container.js';
 import './components/nav/nav.js';
 import './components/userWord/userWord.js';
 
-const houseWords = [
-  createTopicWord('window', 'окно'),
-  createTopicWord('roof', 'крыша'),
-  createTopicWord('attic', 'чердак'),
-  createTopicWord('porch', 'крыльцо'),
-  createTopicWord('stairs', 'лестница'),
-  createTopicWord('door', 'дверь'),
-  createTopicWord('fireplace', 'камин'),
-  createTopicWord('fence', 'забор'),
-]
-addTopic('house', houseWords);
+const createHouseWord = createTopicWord.bind(null, 'house');
+createHouseWord('attic', 'чердак');
+createHouseWord('door', 'дверь');
+createHouseWord('fence', 'забор');
+createHouseWord('fireplace', 'камин');
+createHouseWord('porch', 'крыльцо');
+createHouseWord('roof', 'крыша');
+createHouseWord('stairs', 'лестница');
+createHouseWord('window', 'окно');
 
-const kitchenWords = [
-  createTopicWord('knife', 'нож'),
-  createTopicWord('spoon', 'ложка'),
-  createTopicWord('fork', 'вилка'),
-  createTopicWord('plate', 'тарелка'),
-  createTopicWord('cup', 'чашка'),
-  createTopicWord('teapot', 'чайник'),
-  createTopicWord('ladle', 'поварешка'),
-  createTopicWord('pan', 'сковорода'),
-]
-addTopic('kitchen', kitchenWords);
+const createKitchenWord = createTopicWord.bind(null, 'kitchen');
+createKitchenWord('knife', 'нож');
+createKitchenWord('spoon', 'ложка');
+createKitchenWord('fork', 'вилка');
+createKitchenWord('plate', 'тарелка');
+createKitchenWord('cup', 'чашка');
+createKitchenWord('teapot', 'чайник');
+createKitchenWord('ladle', 'поварешка');
+createKitchenWord('pan', 'сковорода');
 
+const createBathroomWord = createTopicWord.bind(null, 'bathroom');
+createBathroomWord('shower', 'душ');
+createBathroomWord('bath', 'ванна');
+createBathroomWord('slippers', 'тапки');
+createBathroomWord('soap', 'мыло');
+createBathroomWord('mirror', 'зеркало');
+createBathroomWord('towel', 'полотенце');
+createBathroomWord('shampoo', 'шампунь');
+createBathroomWord('hairdryer', 'фен');
 
-const bathroomWords = [
-  createTopicWord('shower', 'душ'),
-  createTopicWord('bath', 'ванна'),
-  createTopicWord('slippers', 'тапки'),
-  createTopicWord('soap', 'мыло'),
-  createTopicWord('mirror', 'зеркало'),
-  createTopicWord('towel', 'полотенце'),
-  createTopicWord('shampoo', 'шампунь'),
-  createTopicWord('hairdryer', 'фен'),
-]
-addTopic('bathroom', bathroomWords);
+const createRoadWord = createTopicWord.bind(null, 'road');
+createRoadWord( 'wheel', 'колесо');
+createRoadWord( 'car', 'машина');
+createRoadWord( 'fuel', 'топливо');
+createRoadWord( 'luggage', 'багаж');
+createRoadWord( 'driver', 'водитель');
+createRoadWord( 'passenger', 'пассажир');
+createRoadWord( 'sign', 'знак');
+createRoadWord( 'traffic light', 'светофор');
 
-const roadWords = [
-  createTopicWord( 'wheel', 'колесо'),
-  createTopicWord( 'car', 'машина'),
-  createTopicWord( 'fuel', 'топливо'),
-  createTopicWord( 'luggage', 'багаж'),
-  createTopicWord( 'driver', 'водитель'),
-  createTopicWord( 'passenger', 'пассажир'),
-  createTopicWord( 'sign', 'знак'),
-  createTopicWord( 'traffic light', 'светофор'),
-]
-addTopic('road', roadWords);
-
-
-const bodyWords = [
-  createTopicWord('head', 'голова'),
-  createTopicWord('forehead', 'лоб'),
-  createTopicWord('arm', 'рука'),
-  createTopicWord('leg', 'нога'),
-  createTopicWord('back', 'спина'),
-  createTopicWord('stomach', 'живот'),
-  createTopicWord('elbow', 'локоть'),
-  createTopicWord('knee', 'колено'),
-]
-addTopic('body', bodyWords);
+const createBodyWord = createTopicWord.bind(null, 'body');
+createBodyWord('head', 'голова');
+createBodyWord('forehead', 'лоб');
+createBodyWord('arm', 'рука');
+createBodyWord('leg', 'нога');
+createBodyWord('back', 'спина');
+createBodyWord('stomach', 'живот');
+createBodyWord('elbow', 'локоть');
+createBodyWord('knee', 'колено');
 
 
 let theme = 'light'
@@ -86,3 +75,6 @@ function changeTheme(obj){
     break
   }
 }
+
+const headerTitle = document.querySelector('.header__title');
+headerTitle.addEventListener('click', openNavigation);

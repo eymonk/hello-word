@@ -102,6 +102,10 @@ input:focus {
   align-items: center;
 }
 
+.header__title {
+  cursor: pointer;
+}
+
 .header__menu {
   display: flex;
   gap: 1.5rem;

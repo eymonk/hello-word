@@ -1,4 +1,4 @@
-import { closeNavigation, openTopic } from '../container/container.js';
+import { openTopic } from '../container/container.js';
 
 const dom = {
     navItems: document.querySelectorAll('.container__nav-item'),
