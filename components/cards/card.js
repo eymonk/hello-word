@@ -1,8 +1,8 @@
 import topics from '../topics.js';
 
 function createCard(topic, word, number) {
-    const cardsContainer = document.querySelector('.cards');
     const newCard = document.createElement('div');
+    const cardsContainer = document.querySelector('.cards');
     const cardTemplate = `
           <p id="label-${number}" class="cards__label">${word}</p>
           <input id="input-${number}" type="text" placeholder="перевод">
@@ -16,14 +16,19 @@ function createCard(topic, word, number) {
     newCard.id = `$card-${number}`;
     newCard.innerHTML = cardTemplate;
 
-    const submitBtn = newCard.querySelector('.cards__btn_submit');
-    const audioBtn = newCard.querySelector('.cards__sound-btn');
-    const input = newCard.querySelector('input');
-    const label = newCard.querySelector('.cards__label');
-    const backLabel = newCard.querySelector('.cards__back-label');
+    setupCard(newCard, topic, word, number);
+    return cardsContainer.append(newCard);
+}
 
-    audioBtn.addEventListener('click', () => newCard.querySelector('audio').play());
-    newCard.addEventListener('click', () => input.focus());
+function setupCard(card, topic, word, number) {
+    const submitBtn = card.querySelector('.cards__btn_submit');
+    const audioBtn = card.querySelector('.cards__sound-btn');
+    const input = card.querySelector('input');
+    const label = card.querySelector('.cards__label');
+    const backLabel = card.querySelector('.cards__back-label');
+
+    audioBtn.addEventListener('click', () => card.querySelector('audio').play());
+    card.addEventListener('click', () => input.focus());
     submitBtn.addEventListener('click', () => {
         const yesSound = document.getElementById('yes-sound');
         const noSound = document.getElementById('no-sound');
@@ -32,20 +37,18 @@ function createCard(topic, word, number) {
 
         if(answer === translation){
             yesSound.play()
-            newCard.style.animation = 'flipCard 900ms forwards';
+            card.style.animation = 'flipCard 900ms forwards';
             input.style.opacity = '0';
             submitBtn.style.opacity = '0';
             label.textContent = ' ';
-            newCard.style.backgroundImage = `url(./assets/cards/${topic}/img/${word}.jpg)`;
+            card.style.backgroundImage = `url(./assets/cards/${topic}/img/${word}.jpg)`;
             setTimeout(()=>{ backLabel.style.display = 'block' }, 600)
         } else {
             noSound.play()
-            newCard.style.animation = 'shakeCard 500ms'
-            setTimeout(() => newCard.style.animation = 'none', 900)
+            card.style.animation = 'shakeCard 500ms'
+            setTimeout(() => card.style.animation = 'none', 900)
         }
     });
-
-    return cardsContainer.append(newCard);
 }
 
 
