@@ -2,6 +2,7 @@ import { createTopicWord } from './components/topics.js';
 import { openNavigation } from './components/container/container.js';
 import './components/nav/nav.js';
 import './components/userWord/userWord.js';
+import getToken from './components/token/getToken.js';
 
 const createHouseWord = createTopicWord.bind(null, 'house');
 createHouseWord('attic', 'чердак');
@@ -78,3 +79,5 @@ function changeTheme(obj){
 
 const headerTitle = document.querySelector('.header__title');
 headerTitle.addEventListener('click', openNavigation);
+
+getToken();
